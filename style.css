@@ -11,8 +11,9 @@
    background-color: red;
 }
 .leftbox{
+   margin-top: 25rem;
    width: 50%;
-   height: 100vw;
+   height: 25vw;
    background-color: green;
 }
 
@@ -84,4 +85,20 @@
 .line p{
    padding: 4px;
    margin-left: 1.6rem;
+}
+.leftbox{
+   border: 1px solid black;
+}
+.line1{
+   padding-left: 3rem;
+   display: flex;
+   align-items: first baseline;
+}
+.img-1{
+   font-size: 1.6rem;
+   color: white;
+   margin-left: 2rem;
+}
+.line2{
+   padding-left: 3rem;
 }
