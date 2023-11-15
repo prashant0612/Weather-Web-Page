@@ -38,9 +38,22 @@
    margin-left: 1rem;
    align-items: center;
 }
-.box2{
-   border: 1px solid black;
-   padding: 20px;
+.container2{
+   margin-top: 1.5rem;
+   margin-right: 50px;
    display: flex;
    justify-content: flex-end;
+}
+.box2{
+   border-radius: 15px;
+   border: 2px solid black;
+   padding: 20px;
+}
+.box2-p{
+   font-size: 15px;
+   border-bottom: 1px solid black;
+}
+.content{
+   display: flex;
+   justify-content:space-evenly
 }
