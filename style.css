@@ -1,3 +1,46 @@
-h1{
-   text-align: center;
+*{
+   margin: 0;
+   padding: 0;
+  
+}
+.container1{
+   display: flex;
+   justify-content: end;
+   margin-top: 8rem;
+   margin-right: 50px;
+}
+.box1{
+   border-radius: 15px;
+   padding:20px;
+   border: 2px solid black;
+}
+.box1-p{
+   font-size: 15px;
+   border-bottom: 1px solid black;
+}
+.main p{
+   font-size: 20px;
+}
+.main{
+   display: flex;
+   margin-top: 0.4rem;
+}
+.main1{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+}
+.main2{
+   display: flex;
+   justify-content: center;
+   flex-direction:column;
+   margin-left: 1rem;
+   align-items: center;
+}
+.box2{
+   border: 1px solid black;
+   padding: 20px;
+   display: flex;
+   justify-content: flex-end;
 }
