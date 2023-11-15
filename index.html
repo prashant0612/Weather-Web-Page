@@ -2,122 +2,94 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Weather Forcasting</title>
+    <title>Weather Forcast</title>
 </head>
 
 <body>
-  <div class="container1">
 
-    <div class="leftbox">
+    <div class="container">
 
-      <div class="line1">
-        <p style="font-size: 50px;font-weight: bold;color: white;">23&deg;c </p> 
-        <i class="fa-solid fa-cloud-rain img-1"></i>
-      </div> 
-      <div class="line2">
-        <p style="font-size: 2rem;color: white;">Watermelon Park</p>
-        <p style="color: white;">10:43 | H:32&deg; L:18&deg;</p>
-      </div>
 
+        <div class="left">
+            <h4>Weather App</h4>
+            <div class="info">
+                <div class="degAndIcon">
+                    <div class="deg">
+                        <h1>23<span class="cel">&deg;c</span></h1>
+                    </div>
+                    <div class="icon">
+                        <span class="material-symbols-outlined">
+                            weather_hail
+                        </span>
+                    </div>
+                </div>
+                <h2>Watermelon Park</h2>
+                <p>10:43 | H:32&deg; L:18&deg;</p>
+            </div>
+        </div>
+
+
+
+        <div class="right">
+            <div class="dayforcast">
+                <h4 class="box1-p">Thunderstroms expected around 00:00</h4>
+                <hr>
+                <div class="dayforcastIcon">
+                <div class="main1">
+                    <i class="fa-solid fa-circle-dot dot"></i>
+                    <p style="font-size: 15px;">Now</p>
+                    <i class="fa-solid fa-cloud-rain"></i>
+                    <p style="font-size: 15px;">23 <span class="cel">&deg;c</span></p>
+                  </div>
+        
+                  <div class="main2">
+                    <p style="font-size: 15px;">00</p>
+                    <i class="fa-solid fa-cloud-rain"></i>
+                    <p style="font-size: 15px;">21 <span class="cel">&deg;c</span></p>
+                  </div>
+                  <div class="main2">
+                    <p style="font-size: 15px;">01</p>
+                    <i class="fa-solid fa-cloud-rain"></i>
+                    <p style="font-size: 15px;">20 <span class="cel">&deg;c</span></p>
+                  </div>
+                  <div class="main2">
+                    <p style="font-size: 15px;">02</p>
+                    <i class="fa-solid fa-cloud-rain"></i>
+                    <p style="font-size: 15px;">20 <span class="cel">&deg;c</span></p>
+                  </div>
+                  <div class="main2">
+                    <p style="font-size: 15px;">03</p>
+                    <i class="fa-solid fa-cloud-rain"></i>
+                    <p style="font-size: 15px;">23 <span class="cel">&deg;c</span></p>
+                  </div>
+                  <div class="main2">
+                    <p style="font-size: 15px;">04</p>
+                    <i class="fa-solid fa-cloud-rain"></i>
+                    <p style="font-size: 15px;">23 <span class="cel">&deg;c</span></p>
+                  </div>
+                </div>
+            </div>
+            <div class="fivedayforcast">
+                <h4 class="box1-p">Thunderstroms expected around 00:00</h4>
+                <hr>
+                <div class="fivedayforcastInfo">
+
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="rightbox">
-      <div class="box1">
-        <p class="box1-p">Thunderstroms expected around 00:00</p>
-        <div class="main">
-          <div class="main1">
-            <i class="fa-solid fa-circle-dot"></i>
-            <p style="font-size: 15px;">Now</p>
-            <i class="fa-solid fa-cloud-rain"></i>
-            <p style="font-size: 15px;">23&deg;c</p>
-          </div>
 
-          <div class="main2">
-            <p style="font-size: 15px;">00</p>
-            <i class="fa-solid fa-cloud-rain"></i>
-            <p style="font-size: 15px;">21&deg;c</p>
-          </div>
-          <div class="main2">
-            <p style="font-size: 15px;">01</p>
-            <i class="fa-solid fa-cloud-rain"></i>
-            <p style="font-size: 15px;">20&deg;c</p>
-          </div>
-          <div class="main2">
-            <p style="font-size: 15px;">02</p>
-            <i class="fa-solid fa-cloud-rain"></i>
-            <p style="font-size: 15px;">20&deg;c</p>
-          </div>
-          <div class="main2">
-            <p style="font-size: 15px;">03</p>
-            <i class="fa-solid fa-cloud-rain"></i>
-            <p style="font-size: 15px;">23&deg;c</p>
-          </div>
-          <div class="main2">
-            <p style="font-size: 15px;">04</p>
-            <i class="fa-solid fa-cloud-rain"></i>
-            <p style="font-size: 15px;">23&deg;c</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container2">
-        <div class="box2">
-          <div class="box2-p">
-            <p>5-Day Forecast</p>
-          </div>
-          <div class="content">
-            <div class="day">
-              <p>Today</p>
-              <p>Thu</p>
-              <p>Fri</p>
-              <p>Sat</p>
-              <p>Sun</p>
-            </div>
-
-            <div class="cloud">
-              <p><i class="fa-solid fa-cloud-rain"></i></p>
-              <p><i class="fa-solid fa-cloud-rain"></i></p>
-              <p><i class="fa-solid fa-cloud-rain"></i></p>
-              <p><i class="fa-solid fa-cloud-rain"></i></p>
-              <p><i class="fa-solid fa-cloud-rain"></i></p>
-            </div>
-
-            <div class="deg-1">
-              <p>18&deg;c</p>
-              <p>20&deg;c</p>
-              <p>23&deg;c</p>
-              <p>22&deg;c</p>
-              <p>23&deg;c</p>
-            </div>
-
-            <div class="line">
-              <p>---------------</p>
-              <p>---------------</p>
-              <p>---------------</p>
-              <p>---------------</p>
-              <p>---------------</p>
-            </div>
-
-            <div class="deg-1">
-              <p>32&deg;c</p>
-              <p>29&deg;c</p>
-              <p>31&deg;c</p>
-              <p>29&deg;c</p>
-              <p>33&deg;c</p>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-
-      <script src="script.js"></script>
+    </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>

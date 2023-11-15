@@ -1,104 +1,142 @@
+@font-face {
+   font-family: Poppins;
+   src: url(/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+   font-family: PoppinsBold;
+   src: url(/fonts/Poppins/Poppins-Bold.ttf);
+}
+
 *{
-   margin: 0;
    padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+body,html{
+   width: 100%;
+   height: 100%;
+   font-family: Poppins;
   
 }
-.container1{
+.container{
    width: 100%;
-   height: 100vw;
-   display: flex;
-   justify-content: end;
-   background-color: red;
+   height: 100%;
+   padding: 5%;
+   background-image: url("https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-size: cover;
+   background-position: top;
+       display: flex;
+       color: white;
 }
-.leftbox{
-   margin-top: 25rem;
+.left{
    width: 50%;
-   height: 25vw;
-   background-color: green;
-}
-
-.rightbox{
+   height: 100%;
+   /* background-color: rgba(255, 192, 203, 0.596); */
+   font-weight: 700;
    display: flex;
    flex-direction: column;
-   width: 50%;
-   height: 100vw;
-   background-color: pink;
+   justify-content: space-between;
+   padding:0 0 15vh 15vh;
 }
-
-.box1{
-   background-color: blue;
-   border-radius: 15px;
-   padding:20px;
-   border: 2px solid black;
+.left h4{
+   font-size: small;
 }
-.box1-p{
-   font-size: 15px;
-   border-bottom: 1px solid black;
+.info{
+   width: 100%;
 }
-.main p{
-   font-size: 20px;
-}
-.main{
+.degAndIcon{
    display: flex;
-   margin-top: 0.4rem;
-}
-.main1{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+   padding: 5px;
+   position: relative;
    
 }
-.main2{
+.deg{
+   width: 120px;
+
+}
+.degAndIcon .icon{
+   width: 50%;
+   padding:28px 0 0 15px  ;
+}
+.degAndIcon .icon span{
+   display: inline;
+   font-size: 50px;
+}
+.deg h1{
+   font-family: PoppinsBold;
+   font-size: 70px;
+}
+.degAndIcon .cel{
+   font-family: Poppins;
+   font-weight: 100;
+   position: absolute;
+   font-size: 40px;
+   display: inline;
+}
+.info h2{
+   font-size: 30px;
+   letter-spacing: 1px;
+   padding-bottom: 5px;
+}
+.info p{
+   font-size: 20px;
+   font-weight: 100;
+   letter-spacing: 1.5px;
+}
+.right{
+   width: 50%;
+   height: 100%;
+   /* background-color: rgba(0, 128, 0, 0.589); */
+}
+.right .dayforcast{
+   width: calc(100% - 15vh);
+   height:200px ;
+   margin-top: 25px;
+   padding: 25px;
+   border-radius: 20px;
+   background-color:rgba(78, 78, 78, 0.322);
+   backdrop-filter: blur(3px);
    display: flex;
-   justify-content: center;
-   flex-direction:column;
-   margin-left: 1rem;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.dayforcast h4{
+   font-weight: 100;
+   margin-bottom: 3px;
+}
+hr{
+   outline: none;
+   box-shadow: none;
+}
+.dayforcastIcon{
+   display: flex;
    align-items: center;
+   justify-content: space-between;
+   font-size: 30px;
+}
+.dayforcast .cel{
+   display: inline;
+   font-family: Poppins;
+   font-weight: 100;
+   position: absolute;
+   font-size: 10px;
 }
 
-.box2{
-   border: 1px solid black;
-   padding: 25px;
-   justify-content: flex-end;
-   border-radius: 15px;
+.dot{
+   margin-top: 3px;
+   font-size: 10px;
 }
-.box2-p{
-   font-size: 15px;
-   border-bottom: 1px solid black;
+.right .fivedayforcast{
+   width: calc(100% - 15vh);
+   background-color: aquamarine;
 }
-.content{
-   align-items:center;
-   margin-top: 0.5rem;
+.main1,.main2{
+   width: 50px;
+   height: 120px;
+   font-weight: bold;
+   /* background-color: red; */
    display: flex;
-}
-.day p{
-   padding: 4px;
-}
-.cloud p{
-   padding: 4px;
-   margin-left: 1.6rem;
-}
-.deg-1 p{
-   padding: 4px;
-   margin-left: 1.6rem;
-}
-.line p{
-   padding: 4px;
-   margin-left: 1.6rem;
-}
-.leftbox{
-   border: 1px solid black;
-}
-.line1{
-   padding-left: 3rem;
-   display: flex;
-   align-items: first baseline;
-}
-.img-1{
-   font-size: 1.6rem;
-   color: white;
-   margin-left: 2rem;
-}
-.line2{
-   padding-left: 3rem;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
 }
