@@ -2,33 +2,38 @@
    font-family: Poppins;
    src: url(/fonts/Poppins/Poppins-Regular.ttf);
 }
+
 @font-face {
    font-family: PoppinsBold;
    src: url(/fonts/Poppins/Poppins-Bold.ttf);
 }
 
-*{
+* {
    padding: 0;
    margin: 0;
    box-sizing: border-box;
 }
-body,html{
+
+body,
+html {
    width: 100%;
    height: 100%;
    font-family: Poppins;
-  
+
 }
-.container{
+
+.container {
    width: 100%;
    height: 100%;
    padding: 5%;
    background-image: url("https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
    background-size: cover;
    background-position: top;
-       display: flex;
-       color: white;
+   display: flex;
+   color: white;
 }
-.left{
+
+.left {
    width: 50%;
    height: 100%;
    /* background-color: rgba(255, 192, 203, 0.596); */
@@ -36,85 +41,101 @@ body,html{
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   padding:0 0 15vh 15vh;
+   padding: 0 0 15vh 15vh;
 }
-.left h4{
+
+.left h4 {
    font-size: small;
 }
-.info{
+
+.info {
    width: 100%;
 }
-.degAndIcon{
+
+.degAndIcon {
    display: flex;
    padding: 5px;
    position: relative;
-   
+
 }
-.deg{
+
+.deg {
    width: 120px;
 
 }
-.degAndIcon .icon{
+
+.degAndIcon .icon {
    width: 50%;
-   padding:28px 0 0 15px  ;
+   padding: 28px 0 0 15px;
 }
-.degAndIcon .icon span{
+
+.degAndIcon .icon span {
    display: inline;
    font-size: 50px;
 }
-.deg h1{
+
+.deg h1 {
    font-family: PoppinsBold;
    font-size: 70px;
 }
-.degAndIcon .cel{
+
+.degAndIcon .cel {
    font-family: Poppins;
    font-weight: 100;
    position: absolute;
    font-size: 40px;
    display: inline;
 }
-.info h2{
+
+.info h2 {
    font-size: 30px;
    letter-spacing: 1px;
    padding-bottom: 5px;
 }
-.info p{
+
+.info p {
    font-size: 20px;
    font-weight: 100;
    letter-spacing: 1.5px;
 }
-.right{
+
+.right {
    width: 50%;
    height: 100%;
    /* background-color: rgba(0, 128, 0, 0.589); */
 }
-.right .dayforcast{
+
+.right .dayforcast {
    width: calc(100% - 15vh);
-   height:200px ;
+   height: 200px;
    margin-top: 25px;
    padding: 25px;
    border-radius: 20px;
-   background-color:rgba(78, 78, 78, 0.322);
+   background-color: rgba(78, 78, 78, 0.322);
    backdrop-filter: blur(3px);
    display: flex;
    flex-direction: column;
    justify-content: space-between;
 }
-.dayforcast h4{
+
+.dayforcast h4 {
    font-weight: 100;
    margin-bottom: 3px;
 }
-hr{
+
+hr {
    outline: none;
    box-shadow: none;
 }
-.dayforcastIcon{
+
+.dayforcastIcon {
    display: flex;
    align-items: center;
    justify-content: space-between;
    font-size: 30px;
 }
-.dayforcast .cel{
+
+.dayforcast .cel {
    display: inline;
    font-family: Poppins;
    font-weight: 100;
@@ -122,15 +143,13 @@ hr{
    font-size: 10px;
 }
 
-.dot{
+.dot {
    margin-top: 3px;
    font-size: 10px;
 }
-.right .fivedayforcast{
-   width: calc(100% - 15vh);
-   background-color: aquamarine;
-}
-.main1,.main2{
+
+.main1,
+.main2 {
    width: 50px;
    height: 120px;
    font-weight: bold;
@@ -140,3 +159,150 @@ hr{
    align-items: center;
    justify-content: space-evenly;
 }
+
+.right .fivedayforcast {
+   margin-top: 15px;
+   padding: 25px;
+   border-radius: 20px;
+   width: calc(100% - 15vh);
+   background-color: rgba(78, 78, 78, 0.322);
+   backdrop-filter: blur(3px);}
+
+.fivedayforcastInfo ul li {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 5px;
+   font-size: 16px;
+   font-weight: bold;
+}
+
+.fivedayforcastInfo .upperbar {
+   width: 30%;
+   height: 3px;
+   background-color: white;
+}
+
+.fivedayforcastInfo .innerbar {
+   width: 60%;
+   height: 100%;
+   background-color: rgb(0, 102, 255);
+}
+.fivedayforcastInfo .one {
+   width: 52%;
+}
+.fivedayforcastInfo .two {
+   width: 49%;
+}
+.fivedayforcastInfo .three {
+   width: 31%;
+}
+.fivedayforcastInfo .four {
+   width: 49%;
+}
+.fivedayforcastInfo .five {
+   width: 63%;
+}
+
+.fivedayforcastInfo .icon{
+   font-size: 30px;
+}
+.fivedayforcastInfo .cel{
+   display: inline;
+   font-family: Poppins;
+   font-weight: 100;
+   position: absolute;
+   font-size: 10px;
+}
+.fivedayforcastInfo .day{
+   width: 60px;
+}
+.fivedayforcastInfo h4{
+   width: 30px;
+}
+
+@media screen and (max-width: 1057px) {
+   .right .dayforcast {
+      width: 100%;
+   }
+   .right .fivedayforcast {
+      width: 100%;
+   }
+ }
+ @media screen and (max-width: 700px) {
+
+   .container{
+      flex-direction: column;
+   }
+   .left{
+      width: 100%;
+      padding: 0;
+   }
+   .deg h1 {
+      font-size: 50px;
+   }
+
+.degAndIcon .icon span {
+   font-size: 30px;
+}
+
+.degAndIcon .cel {
+   font-size: 30px;
+}
+.info h2 {
+   font-size: 20px;
+   padding-bottom: 2px;
+}
+.info p {
+   font-size: 10px;
+  
+}
+   .right{
+      width: 100%;
+   }
+ }
+
+ @media screen and (max-width: 400px) {
+   .container{
+      padding: 0;
+   }
+   .left{
+      height: 50%;
+      padding: 25px;
+   }
+   .right .dayforcast {
+      height: 150px;
+      margin-top: 0px;
+      border-radius: 0;
+      padding: 10px;
+   }
+   .right .fivedayforcast {
+      margin-top: 3px;
+      padding: 10px;
+      border-radius: 0px;
+   }
+   .dayforcastIcon {
+      font-size: 15px;
+   }
+   .main1,
+.main2 {
+   width: 50px;
+   height: 80px;
+   font-weight: 100;
+}
+.fivedayforcastInfo ul li {
+   padding: 5px;
+   font-size: 13px;
+   font-weight: 100;
+}
+
+.fivedayforcastInfo .icon{
+   font-size: 15px;
+}
+.fivedayforcast .box1-p{
+
+   font-weight: 100;
+   padding-bottom: 10px;
+}
+ }
