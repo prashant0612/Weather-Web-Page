@@ -48,7 +48,6 @@ html {
    background-color: transparent;
    border: 1px solid white;
    color: white;
-
 }
 #myInput::placeholder{
    padding-left: 10px;
@@ -59,6 +58,7 @@ html {
    color: white;
    padding: 5px;
    height: 1.8rem;
+   border: 1px solid white;
 }
 
 .left h4 {
