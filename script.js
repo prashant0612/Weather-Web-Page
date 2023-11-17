@@ -34,8 +34,4 @@ function handleInput(){
  
 
 }
-
-
-
-  // Call the function to fetch weather data and display it
   

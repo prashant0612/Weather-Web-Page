@@ -73,12 +73,10 @@ html {
    display: flex;
    padding: 5px;
    position: relative;
-
 }
 
 .degree {
    width: 120px;
-
 }
 
 .degAndIcon .icon {
@@ -91,7 +89,7 @@ html {
    font-size: 50px;
 }
 
-.deg h1 {
+.degree h1 {
    font-family: PoppinsBold;
    font-size: 70px;
 }
