@@ -77,7 +77,10 @@ html {
 }
 
 .degree {
-   width: 120px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100px;
 
 }
 
@@ -91,7 +94,7 @@ html {
    font-size: 50px;
 }
 
-.deg h1 {
+.degree h1 {
    font-family: PoppinsBold;
    font-size: 70px;
 }
@@ -179,7 +182,7 @@ hr {
 
 .right .fivedayforcast {
    margin-top: 15px;
-   padding: 25px;
+   padding: 12px;
    border-radius: 20px;
    width: calc(100% - 15vh);
    background-color: rgba(78, 78, 78, 0.322);

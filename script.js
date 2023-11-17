@@ -5,7 +5,7 @@ function handleInput(){
     const apiKey = '4e13120cf71ced98bb0b83db4a8624fe';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}`;
    
-
+   
     fetch(url)
       .then(response => {
         if (!response.ok) {
