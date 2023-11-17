@@ -1,33 +1,29 @@
 function handleInput(){
   var inputElement = document.getElementById('myInput');
   var inputValue = inputElement.value;
-  function fetchWeatherData() {
-    const url = `https://foreca-weather.p.rapidapi.com/location/search/${inputValue}?lang=en&country=in`;
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '747d25a676msh9e71fd01e72869bp1e2d86jsndd1c6909fada',
-        'X-RapidAPI-Host': 'foreca-weather.p.rapidapi.com'
-      }
-    };
-  
-    fetch(url, options)
+
+    const apiKey = '4e13120cf71ced98bb0b83db4a8624fe';
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}`;
+   
+
+    fetch(url)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         return response.json(); // Parse response as JSON
       })
-      .then(result => {
-        console.log(result); // Log the result to see its structure
-          const city = result.locations[0].name;
+      .then(data => {
+        console.log(data); // Log the result to see its structure
+          const city = data.name;
           const cityElement = document.querySelector('.location');
           cityElement.innerHTML = city;
+         
       })
       .catch(error => {
         console.error('There has been a problem with your fetch operation:', error);
       });
-  }
+  
   fetchWeatherData();
 
 }
