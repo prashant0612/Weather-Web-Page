@@ -1,12 +1,8 @@
 function handleInput(){
   var inputElement = document.getElementById('myInput');
   var inputValue = inputElement.value;
-  alert(inputValue)
-}
-
-
-function fetchWeatherData() {
-    const url = 'https://foreca-weather.p.rapidapi.com/location/search/mumbai?lang=en&country=in';
+  function fetchWeatherData() {
+    const url = `https://foreca-weather.p.rapidapi.com/location/search/${inputValue}?lang=en&country=in`;
     const options = {
       method: 'GET',
       headers: {
@@ -32,7 +28,11 @@ function fetchWeatherData() {
         console.error('There has been a problem with your fetch operation:', error);
       });
   }
-  
-  // Call the function to fetch weather data and display it
   fetchWeatherData();
+
+}
+
+
+
+  // Call the function to fetch weather data and display it
   
