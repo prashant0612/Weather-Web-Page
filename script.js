@@ -18,6 +18,13 @@ function handleInput(){
           const city = data.name;
           const cityElement = document.querySelector('.location');
           cityElement.innerHTML = city;
+
+
+          const temp = data.main.temp;
+          tempCelcious = Math.floor(temp - 273.15);
+          const temperature = document.querySelector('.deg');
+          temperature.innerHTML = tempCelcious;
+
          
       })
       .catch(error => {
