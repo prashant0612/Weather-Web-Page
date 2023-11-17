@@ -1,3 +1,10 @@
+function handleInput(){
+  var inputElement = document.getElementById('myInput');
+  var inputValue = inputElement.value;
+  alert(inputValue)
+}
+
+
 function fetchWeatherData() {
     const url = 'https://foreca-weather.p.rapidapi.com/location/search/mumbai?lang=en&country=in';
     const options = {
