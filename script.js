@@ -1,5 +1,5 @@
 function fetchWeatherData() {
-    const url = 'https://foreca-weather.p.rapidapi.com/location/search/patna?lang=en&country=in';
+    const url = 'https://foreca-weather.p.rapidapi.com/location/search/mumbai?lang=en&country=in';
     const options = {
       method: 'GET',
       headers: {

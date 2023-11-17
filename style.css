@@ -43,6 +43,23 @@ html {
    justify-content: space-between;
    padding: 0 0 15vh 15vh;
 }
+#myInput{
+   height: 1.8rem;
+   background-color: transparent;
+   border: 1px solid white;
+   color: white;
+
+}
+#myInput::placeholder{
+   padding-left: 10px;
+   color: white;
+}
+.submit-btn{
+   background-color: transparent;
+   color: white;
+   padding: 5px;
+   height: 1.8rem;
+}
 
 .left h4 {
    font-size: small;
