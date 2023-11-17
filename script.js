@@ -23,7 +23,7 @@ function handleInput(){
           const temp = data.main.temp;
           tempCelcious = Math.floor(temp - 273.15);
           const temperature = document.querySelector('.deg');
-          temperature.innerHTML = tempCelcious;
+          temperature.innerHTML = `${tempCelcious}<span class="cel">&deg;c</span>`;
 
          
       })
