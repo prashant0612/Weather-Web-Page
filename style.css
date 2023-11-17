@@ -44,21 +44,28 @@ html {
    padding: 0 0 15vh 15vh;
 }
 #myInput{
-   height: 1.8rem;
-   background-color: transparent;
+   height: 2rem;
    border: 1px solid white;
+   padding: 8px 30px;
    color: white;
+   border-radius: 20px;
+   background-color: rgba(78, 78, 78, 0.322);
+   backdrop-filter: blur(3px);
+
 }
 #myInput::placeholder{
    padding-left: 10px;
    color: white;
 }
 .submit-btn{
-   background-color: transparent;
    color: white;
-   padding: 5px;
-   height: 1.8rem;
+   padding: 8px 15px;
+   height: 2rem;
    border: 1px solid white;
+   border-radius: 20px;
+   background-color: rgba(78, 78, 78, 0.322);
+   backdrop-filter: blur(3px)
+
 }
 
 .left h4 {
@@ -73,14 +80,10 @@ html {
    display: flex;
    padding: 5px;
    position: relative;
-
 }
 
 .degree {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   width: 100px;
+   width: 120px;
 
 }
 
@@ -186,7 +189,8 @@ hr {
    border-radius: 20px;
    width: calc(100% - 15vh);
    background-color: rgba(78, 78, 78, 0.322);
-   backdrop-filter: blur(3px);}
+   backdrop-filter: blur(3px);
+}
 
 .fivedayforcastInfo ul li {
    position: relative;

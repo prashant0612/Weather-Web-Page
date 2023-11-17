@@ -15,6 +15,7 @@ function handleInput(){
       })
       .then(data => {
         console.log(data); // Log the result to see its structure
+
           const city = data.name;
           const cityElement = document.querySelector('.location');
           cityElement.innerHTML = city;
@@ -23,7 +24,12 @@ function handleInput(){
           const temp = data.main.temp;
           tempCelcious = Math.floor(temp - 273.15);
           const temperature = document.querySelector('.deg');
-          temperature.innerHTML = tempCelcious;
+          temperature.innerHTML = `${tempCelcious}<span class="cel">&deg;c</span>`;
+
+
+          const lat = data.coord.lat;
+          const latitude = document.querySelector('.latitude');
+          
 
          
       })
@@ -34,8 +40,4 @@ function handleInput(){
  
 
 }
-
-
-
-  // Call the function to fetch weather data and display it
   
