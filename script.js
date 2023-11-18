@@ -19,11 +19,6 @@ function handleInput(){
           const datalist = data.list; //whole whether report list thik hai
 
           
-          var currentDate = new Date();
-          var hours = currentDate.getHours();
-          var minutes = currentDate.getMinutes();
-          
-          
           const temp = datalist[0].main.temp; //fatching current temp of the city
           tempCelcious = Math.floor(temp - 273.15);// converting temp - kelvin to celcius 
 
@@ -84,10 +79,9 @@ function handleInput(){
           
           cityElement.innerHTML = `<h2>${city.name}</h2>`;
           temperature.innerHTML = `${tempCelcious}<span class="cel">&deg;c</span>`;
-          timeLonLat.innerHTML = `<p>${hours}:${minutes} | H:${city.coord.lat.toFixed(2)}&deg; L:${city.coord.lon.toFixed(2)}&deg;
+          timeLonLat.innerHTML = `<p>${formattedTime} | H:${city.coord.lat.toFixed(2)}&deg; L:${city.coord.lon.toFixed(2)}&deg;
                                   <br>Sunrise: ${riseHr}hr:${riseMin}min AM
-                                  <br>Sunset: ${setHr}hr:${setMin}min PM
-                                  <br>Timezone:${formattedTime}</p>`;
+                                  <br>Sunset: ${setHr}hr:${setMin}min PM`;
           main1deg.innerHTML = `${tempCelcious} <span class="cel">&deg;c</span>`;
         
        
