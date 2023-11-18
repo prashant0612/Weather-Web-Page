@@ -5,7 +5,7 @@ function handleInput(){
     const apiKey = '4e13120cf71ced98bb0b83db4a8624fe';
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${inputValue}&appid=${apiKey}`;
    
-
+   
     fetch(url)
       .then(response => {
         if (!response.ok) {
@@ -14,7 +14,7 @@ function handleInput(){
         return response.json();
       })
       .then(data => {
-        console.log(data);
+        console.log(data); // Log the result to see its structure
           const city = data.city.name;
           const cityElement = document.querySelector('.location');
           cityElement.innerHTML = city;
@@ -23,9 +23,8 @@ function handleInput(){
           var hours = currentDate.getHours();
           var minutes = currentDate.getMinutes();
 
-          const temp = data.main.temp;
-          const lon = data.coord.lon;
-          const lat = data.coord.lat;
+
+
           tempCelcious = Math.floor(temp - 273.15);
 
           const temperature = document.querySelector('.deg');
@@ -34,10 +33,10 @@ function handleInput(){
 
 
           temperature.innerHTML = `${tempCelcious}<span class="cel">&deg;c</span>`;
-          timeLonLat.innerHTML = `<p>${hours}:${minutes} | H:${lat.toFixed(2)}&deg; L:${lat.toFixed(2)}&deg;</p>`
+          timeLonLat.innerHTML = `<p>${hours}:${minutes} | H:${lat.toFixed(2)}&deg; L:${lon.toFixed(2)}&deg;</p>`
           main1deg.innerHTML = `${tempCelcious} <span class="cel">&deg;c</span>`
 
-
+         
       })
       .catch(error => {
         console.error('There has been a problem with your fetch operation:', error);

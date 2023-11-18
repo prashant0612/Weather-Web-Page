@@ -83,6 +83,7 @@ html {
 
 .degree {
    width: 120px;
+
 }
 
 .degAndIcon .icon {
@@ -183,7 +184,7 @@ hr {
 
 .right .fivedayforcast {
    margin-top: 15px;
-   padding: 25px;
+   padding: 12px;
    border-radius: 20px;
    width: calc(100% - 15vh);
    background-color: rgba(78, 78, 78, 0.322);
