@@ -71,7 +71,15 @@ function handleInput(){
 
           // Create a new Date object with the adjusted time
           const adjustedTime = new Date(timeWithTimeZone);
-
+          
+          const options = {
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            timeZone: 'UTC' // Using UTC as a basis
+          };
+          const formatter = new Intl.DateTimeFormat('en-US', options);
+          const formattedTime = formatter.format(adjustedTime);
           
           
           cityElement.innerHTML = `<h2>${city.name}</h2>`;
@@ -79,7 +87,7 @@ function handleInput(){
           timeLonLat.innerHTML = `<p>${hours}:${minutes} | H:${city.coord.lat.toFixed(2)}&deg; L:${city.coord.lon.toFixed(2)}&deg;
                                   <br>Sunrise: ${riseHr}hr:${riseMin}min AM
                                   <br>Sunset: ${setHr}hr:${setMin}min PM
-                                  <br>Timezone:${adjustedTime}</p>`;
+                                  <br>Timezone:${formattedTime}</p>`;
           main1deg.innerHTML = `${tempCelcious} <span class="cel">&deg;c</span>`;
         
        
