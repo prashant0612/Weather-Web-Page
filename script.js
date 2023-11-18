@@ -11,25 +11,31 @@ function handleInput(){
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.json(); // Parse response as JSON
+        return response.json();
       })
       .then(data => {
         console.log(data); // Log the result to see its structure
-
           const city = data.name;
           const cityElement = document.querySelector('.location');
           cityElement.innerHTML = city;
 
+          var currentDate = new Date();
+          var hours = currentDate.getHours();
+          var minutes = currentDate.getMinutes();
 
           const temp = data.main.temp;
-          tempCelcious = Math.floor(temp - 273.15);
-          const temperature = document.querySelector('.deg');
-          temperature.innerHTML = `${tempCelcious}<span class="cel">&deg;c</span>`;
-
-
+          const lon = data.coord.lon;
           const lat = data.coord.lat;
-          const latitude = document.querySelector('.latitude');
-          
+          tempCelcious = Math.floor(temp - 273.15);
+
+          const temperature = document.querySelector('.deg');
+          const timeLonLat = document.querySelector('.info p')
+          const main1deg = document.querySelector('.main1 .main1deg')
+
+
+          temperature.innerHTML = `${tempCelcious}<span class="cel">&deg;c</span>`;
+          timeLonLat.innerHTML = `<p>${hours}:${minutes} | H:${lat.toFixed(2)}&deg; L:${lat.toFixed(2)}&deg;</p>`
+          main1deg.innerHTML = `${tempCelcious} <span class="cel">&deg;c</span>`
 
          
       })
