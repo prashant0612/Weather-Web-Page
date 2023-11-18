@@ -34,7 +34,7 @@ function handleInput(){
 
 
           temperature.innerHTML = `${tempCelcious}<span class="cel">&deg;c</span>`;
-          timeLonLat.innerHTML = `<p>${hours}:${minutes} | H:${lat.toFixed(2)}&deg; L:${lat.toFixed(2)}&deg;</p>`
+          timeLonLat.innerHTML = `<p>${hours}:${minutes} | H:${lat.toFixed(2)}&deg; L:${lon.toFixed(2)}&deg;</p>`
           main1deg.innerHTML = `${tempCelcious} <span class="cel">&deg;c</span>`
 
          
