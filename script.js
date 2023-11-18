@@ -3,7 +3,7 @@ function handleInput(){
   var inputValue = inputElement.value;
 
     const apiKey = '4e13120cf71ced98bb0b83db4a8624fe';
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${inputValue}&appid=${apiKey}`;
    
 
     fetch(url)
@@ -15,7 +15,7 @@ function handleInput(){
       })
       .then(data => {
         console.log(data);
-          const city = data.name;
+          const city = data.city.name;
           const cityElement = document.querySelector('.location');
           cityElement.innerHTML = city;
 
