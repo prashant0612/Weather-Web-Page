@@ -2,6 +2,7 @@ function handleInput() {
   var inputElement = document.getElementById('myInput');
   var inputValue = inputElement.value;
 
+
   const apiKey = '4e13120cf71ced98bb0b83db4a8624fe';
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${inputValue}&appid=${apiKey}`;
 
