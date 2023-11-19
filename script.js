@@ -38,7 +38,7 @@ function handleInput(){
           // Get hours, minutes, and seconds
           const riseHr = sunRiseDate.getHours();
           const riseMin = sunRiseDate.getMinutes();
-          const  riseSec = sunRiseDate.getSeconds();
+         
 
           // FOR SUNSET   
           const sunSet = city.sunset;
@@ -51,7 +51,7 @@ function handleInput(){
           // Get hours, minutes, and seconds
           const setHr = sunSetDate.getHours();
           const setMin = sunSetDate.getMinutes();
-          const  setSec = sunSetDate.getSeconds();
+          
           
           //TIMEZONE
           const timeZone = city.timezone;
@@ -85,6 +85,18 @@ function handleInput(){
           main1deg.innerHTML = `${tempCelcious} <span class="cel">&deg;c</span>`;
         
        
+          // FOR CLOUD
+          const iconMapping = {
+            '03d': '<img src="weather icon/animated/cloudy-day-1.svg">'    // clear sky day
+          };
+          const cloud = datalist[0].weather[0].icon;
+          const mappedIcon = iconMapping[cloud] ;
+          console.log(mappedIcon);
+          const weatherIconElement = document.querySelector('.icon');
+          weatherIconElement.innerHTML = mappedIcon;
+          
+
+
        
        
          
