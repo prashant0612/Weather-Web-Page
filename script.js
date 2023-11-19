@@ -49,17 +49,39 @@ function handleInput() {
       function extractTime(time){
         return time.split(' ')[1].slice(0, 5); //extracting time form date and time
       }
+      
+      function extractDate(DateAndTime){
+        return DateAndTime.split(' ')[0];
+      }
+
+
+      function fetchDay(givendate){
+        let date = new Date(givendate);
+        let weekdays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+        let dayIndex = date.getDay();
+        return weekdays[dayIndex];
+      }
+  
 
       const temperature = document.querySelector('.deg');
       const timeLonLat = document.querySelector('.info p')
-      const main1 = document.querySelector('.main1');
       const cityElement = document.querySelector('.location');
       const weatherIconElement = document.querySelector('.icon');
+
+      const main1 = document.querySelector('.main1');
       const main2 = document.querySelector('.maintwo');
       const main3 = document.querySelector('.mainthree');
       const main4 = document.querySelector('.mainfour');
       const main5 = document.querySelector('.mainfive');
       const main6 = document.querySelector('.mainsix');
+
+      const today = document.querySelector('.today');
+      const day1 = document.querySelector('.day1');
+      const day2 = document.querySelector('.day2');
+      const day3 = document.querySelector('.day3');
+      const day4 = document.querySelector('.day4');
+
+
       
       
       
@@ -86,6 +108,29 @@ function handleInput() {
       var forcast5hrIcon =datalist[4].weather[0].icon;
       var forcast6hrIcon =datalist[5].weather[0].icon;
 
+      var todayDate =datalist[0].dt_txt;
+      var day1Date =datalist[7].dt_txt;
+      var day2Date =datalist[15].dt_txt;
+      var day3Date =datalist[23].dt_txt;
+      var day4Date =datalist[31].dt_txt;
+      
+      var todayIcon =datalist[0].weather[0].icon;
+      var day1Icon =datalist[7].weather[0].icon;
+      var day2Icon =datalist[15].weather[0].icon;
+      var day3Icon =datalist[23].weather[0].icon;
+      var day4Icon =datalist[31].weather[0].icon;
+      
+      var todayMax =datalist[0].main.temp_max;
+      var day1Max =datalist[7].main.temp_max;
+      var day2Max =datalist[15].main.temp_max;
+      var day3Max =datalist[23].main.temp_max;
+      var day4Max =datalist[31].main.temp_max;
+
+      var todayMin =datalist[0].main.temp_min;
+      var day1Min =datalist[7].main.temp_min;
+      var day2Min =datalist[15].main.temp_min;
+      var day3Min =datalist[23].main.temp_min;
+      var day4Min =datalist[31].main.temp_min;
 
       // FOR SUNRISE 
       const sunRise = city.sunrise;
@@ -158,11 +203,48 @@ function handleInput() {
       ${iconMapping[forcast6hrIcon]}
       <p style="font-size: 15px;">${kalToCel(forcast6hrTemp)} <span class="cel">&deg;c</span></p>`;
       
+
+      // five days for cast html changing
+      today.innerHTML = ` <h4 class="day">${fetchDay(extractDate(todayDate))}</h4>
+      <div class="icon">${iconMapping[todayIcon]}</div>
+      <h4>${kalToCel(todayMin)}<span class="cel">&deg;c</span></h4>
+      <div class="upperbar">
+          <div class="innerbar one"></div>
+      </div>
+      <h4>${kalToCel(todayMax)}<span class="cel">&deg;c</span></h4>`;
+      day1.innerHTML = ` <h4 class="day">${fetchDay(extractDate(day1Date))}</h4>
+      <div class="icon">${iconMapping[day1Icon]}</div>
+      <h4>${kalToCel(day1Min)}<span class="cel">&deg;c</span></h4>
+      <div class="upperbar">
+          <div class="innerbar one"></div>
+      </div>
+      <h4>${kalToCel(day1Max)}<span class="cel">&deg;c</span></h4>`;
+      day2.innerHTML = ` <h4 class="day">${fetchDay(extractDate(day2Date))}</h4>
+      <div class="icon">${iconMapping[day2Icon]}</div>
+      <h4>${kalToCel(day2Min)}<span class="cel">&deg;c</span></h4>
+      <div class="upperbar">
+          <div class="innerbar one"></div>
+      </div>
+      <h4>${kalToCel(day2Max)}<span class="cel">&deg;c</span></h4>`;
+      day3.innerHTML = ` <h4 class="day">${fetchDay(extractDate(day3Date))}</h4>
+      <div class="icon">${iconMapping[day3Icon]}</div>
+      <h4>${kalToCel(day3Min)}<span class="cel">&deg;c</span></h4>
+      <div class="upperbar">
+          <div class="innerbar one"></div>
+      </div>
+      <h4>${kalToCel(day3Max)}<span class="cel">&deg;c</span></h4>`;
+      day4.innerHTML = ` <h4 class="day">${fetchDay(extractDate(day4Date))}</h4>
+      <div class="icon">${iconMapping[day4Icon]}</div>
+      <h4>${kalToCel(day4Min)}<span class="cel">&deg;c</span></h4>
+      <div class="upperbar">
+          <div class="innerbar one"></div>
+      </div>
+      <h4>${kalToCel(day4Max)}<span class="cel">&deg;c</span></h4>`;
+      
+
     })
     .catch(error => {
       console.error('There has been a problem with your fetch operation:', error);
     });
-
-
 
 }
