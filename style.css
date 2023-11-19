@@ -60,14 +60,10 @@ video {
    justify-content: space-between;
    padding: 0 0 15vh 15vh;
 }
-<<<<<<< HEAD
 .inp-btn{
    display: flex;
    justify-content: flex-start;
 }
-=======
-
->>>>>>> a2a8a29a85ffb1e4e10d16f31765afba55181774
 #myInput{
    height: 2rem;
    border: 1px solid white;
@@ -76,7 +72,6 @@ video {
    border-radius: 20px;
    background-color: rgba(78, 78, 78, 0.322);
    backdrop-filter: blur(3px);
-
 }
 #myInput::placeholder{
    color: white;
