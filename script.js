@@ -87,7 +87,6 @@ function handleInput() {
       var forcast6hrIcon =datalist[5].weather[0].icon;
 
 
-
       // FOR SUNRISE 
       const sunRise = city.sunrise;
       // Convert UNIX timestamp to milliseconds
