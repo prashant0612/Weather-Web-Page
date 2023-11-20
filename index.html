@@ -10,140 +10,138 @@
 
 <body>
     <video autoplay muted loop>
-    <source src="./mixkit-thin-clouds-on-a-warm-afternoon-21158-medium.mp4">
-</video>
+        <source src="./video/mixkit-green-leaf-of-a-tree-wet-from-the-rain-18311-medium.mp4">
+    </video>
 
     <div class="container">
 
         <div class="left">
-            <h4>Weather App</h4>
-            <div class="inp-btn">
-                <input type="text" id="myInput" placeholder="Search Your Location">
-                <button onclick="handleInput()" class="submit-btn" type="submit" >Search</button>
-            </div>
-            <div class="info">
 
-                <div class="degAndIcon">
-                    <div class="degree">
-                        <h1 class="deg">--<span class="cel">&deg;c</span></h1>
+            <div class="info">
+                <h4>Weather App</h4>
+                <div class="inp-btn">
+                    <input type="text" id="myInput" placeholder="Search Your Location">
+                    <button onclick="handleInput()" class="submit-btn" type="submit">Search</button>
+                </div>
+                <div class="degAndLoc">
+                    <div class="degAndIcon">
+                        <div class="degree">
+                            <h1 class="deg">--<span class="cel">&deg;c</span></h1>
+                        </div>
+                        <div class="icon"></div>
                     </div>
-                    <div class="icon">
-                        
+                    <div class="location">
+                        <h2>location</h2>
+                        <p>--:-- | H:--&deg; L:--&deg;</p>
                     </div>
                 </div>
-                <div class="location">
-                    <h2>location</h2>
-                </div>
-                <p>--:-- | H:--&deg; L:--&deg;</p>
-                <div class="icon">
-                 
-                </div>
-                
             </div>
         </div>
 
 
 
         <div class="right">
-            <div class="dayforcast">
-                <h4 class="box1-p">Hourly Forcast</h4>
-                <hr>
-                <div class="dayforcastIcon">
-                    <div class="main1">
-                        <p style="font-size: 15px;">Now</p>
-                        <i class="fa-solid fa-cloud-rain"></i>
-                        <p class="main1deg" style="font-size: 15px;">--<span class="cel">&deg;c</span></p>
-                    </div>
+            <div class="dayAndFiveDay">
+                <div class="dayforcast">
+                    <h4 class="box1-p">Hourly Forcast</h4>
+                    <hr>
+                    <div class="dayforcastIcon">
+                        <div class="main1">
+                            <p style="font-size: 15px;">Now</p>
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <p class="main1deg" style="font-size: 15px;">--<span class="cel">&deg;c</span></p>
+                        </div>
 
-                    <div class="main2 maintwo">
-                        <p style="font-size: 15px;">--</p>
-                        <i class="fa-solid fa-cloud-rain"></i>
-                        <p style="font-size: 15px;">--<span class="cel">&deg;c</span></p>
-                    </div>
-                    <div class="main2 mainthree">
-                        <p style="font-size: 15px;">--</p>
-                        <i class="fa-solid fa-cloud-rain"></i>
-                        <p style="font-size: 15px;">-- <span class="cel">&deg;c</span></p>
-                    </div>
-                    <div class="main2 mainfour">
-                        <p style="font-size: 15px;">--</p>
-                        <i class="fa-solid fa-cloud-rain"></i>
-                        <p style="font-size: 15px;">-- <span class="cel">&deg;c</span></p>
-                    </div>
-                    <div class="main2 mainfive">
-                        <p style="font-size: 15px;">--</p>
-                        <i class="fa-solid fa-cloud-rain"></i>
-                        <p style="font-size: 15px;">--<span class="cel">&deg;c</span></p>
-                    </div>
-                    <div class="main2 mainsix">
-                        <p style="font-size: 15px;">--</p>
-                        <i class="fa-solid fa-cloud-rain"></i>
-                        <p style="font-size: 15px;">-- <span class="cel">&deg;c</span></p>
+                        <div class="main2 maintwo">
+                            <p style="font-size: 15px;">--</p>
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <p style="font-size: 15px;">--<span class="cel">&deg;c</span></p>
+                        </div>
+                        <div class="main2 mainthree">
+                            <p style="font-size: 15px;">--</p>
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <p style="font-size: 15px;">-- <span class="cel">&deg;c</span></p>
+                        </div>
+                        <div class="main2 mainfour">
+                            <p style="font-size: 15px;">--</p>
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <p style="font-size: 15px;">-- <span class="cel">&deg;c</span></p>
+                        </div>
+                        <div class="main2 mainfive">
+                            <p style="font-size: 15px;">--</p>
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <p style="font-size: 15px;">--<span class="cel">&deg;c</span></p>
+                        </div>
+                        <div class="main2 mainsix">
+                            <p style="font-size: 15px;">--</p>
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <p style="font-size: 15px;">-- <span class="cel">&deg;c</span></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="fivedayforcast">
+                <div class="fivedayforcast">
 
-                <h4 class="box1-p">5-Day Forecast</h4>
-                <hr>
-                <div class="fivedayforcastInfo">
-                    <ul>
-                        <li class="today">
-                            <h4 class="day">---</h4>
-                            <div class="icon"><i class="fa-solid fa-cloud-rain"></i></div>
-                            <h4>--<span class="cel">&deg;c</span></h4>
-                            <div class="upperbar">
-                                <div class="innerbar one"></div>
-                            </div>
-                            <h4>--<span class="cel">&deg;c</span></h4>
+                    <h4 class="box1-p">5-Day Forecast</h4>
+                    <hr>
+                    <div class="fivedayforcastInfo">
+                        <ul>
+                            <li class="today">
+                                <h4 class="day">---</h4>
+                                <div class="icon"><i class="fa-solid fa-cloud-rain"></i></div>
+                                <h4>--<span class="cel">&deg;c</span></h4>
+                                <div class="upperbar">
+                                    <div class="innerbar one"></div>
+                                </div>
+                                <h4>--<span class="cel">&deg;c</span></h4>
 
-                        </li>
+                            </li>
 
-                        <li class="day1">
-                            <h4 class="day">---</h4>
-                            <div class="icon"><i class="fa-solid fa-cloud-rain"></i></div>
-                            <h4>--<span class="cel">&deg;c</span></h4>
-                            <div class="upperbar">
-                                <div class="innerbar two"></div>
-                            </div>
-                            <h4>--<span class="cel">&deg;c</span></h4>
+                            <li class="day1">
+                                <h4 class="day">---</h4>
+                                <div class="icon"><i class="fa-solid fa-cloud-rain"></i></div>
+                                <h4>--<span class="cel">&deg;c</span></h4>
+                                <div class="upperbar">
+                                    <div class="innerbar two"></div>
+                                </div>
+                                <h4>--<span class="cel">&deg;c</span></h4>
 
-                        </li>
+                            </li>
 
-                        <li class="day2" >
-                            <h4 class="day">---</h4>
-                            <div class="icon"><i class="fa-solid fa-cloud-rain"></i></div>
-                            <h4>--<span class="cel">&deg;c</span></h4>
-                            <div class="upperbar">
-                                <div class="innerbar three"></div>
-                            </div>
-                            <h4>--<span class="cel">&deg;c</span></h4>
+                            <li class="day2">
+                                <h4 class="day">---</h4>
+                                <div class="icon"><i class="fa-solid fa-cloud-rain"></i></div>
+                                <h4>--<span class="cel">&deg;c</span></h4>
+                                <div class="upperbar">
+                                    <div class="innerbar three"></div>
+                                </div>
+                                <h4>--<span class="cel">&deg;c</span></h4>
 
-                        </li>
+                            </li>
 
-                        <li class="day3">
-                            <h4 class="day">---</h4>
-                            <div class="icon"><i class="fa-solid fa-cloud-rain"></i></div>
-                            <h4>--<span class="cel">&deg;c</span></h4>
-                            <div class="upperbar">
-                                <div class="innerbar four"></div>
-                            </div>
-                            <h4>--<span class="cel">&deg;c</span></h4>
+                            <li class="day3">
+                                <h4 class="day">---</h4>
+                                <div class="icon"><i class="fa-solid fa-cloud-rain"></i></div>
+                                <h4>--<span class="cel">&deg;c</span></h4>
+                                <div class="upperbar">
+                                    <div class="innerbar four"></div>
+                                </div>
+                                <h4>--<span class="cel">&deg;c</span></h4>
 
-                        </li>
+                            </li>
 
-                        <li class="day4">
-                            <h4 class="day">---</h4>
-                            <div class="icon"><i class="fa-solid fa-cloud-rain"></i></div>
-                            <h4>--<span class="cel">&deg;c</span></h4>
-                            <div class="upperbar">
-                                <div class="innerbar five"></div>
-                            </div>
-                            <h4>--<span class="cel">&deg;c</span></h4>
+                            <li class="day4">
+                                <h4 class="day">---</h4>
+                                <div class="icon"><i class="fa-solid fa-cloud-rain"></i></div>
+                                <h4>--<span class="cel">&deg;c</span></h4>
+                                <div class="upperbar">
+                                    <div class="innerbar five"></div>
+                                </div>
+                                <h4>--<span class="cel">&deg;c</span></h4>
 
-                        </li>
+                            </li>
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
