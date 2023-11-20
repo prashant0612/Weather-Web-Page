@@ -433,6 +433,7 @@ hr {
    }
    
    .info{
+   height: auto;
    width: 100%;
    }
 }
