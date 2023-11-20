@@ -1,4 +1,17 @@
+<<<<<<< HEAD
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+=======
+@font-face {
+   font-family: Poppins;
+   src: url(./fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+   font-family: PoppinsBold;
+   src: url(./fonts/Poppins/Poppins-Bold.ttf);
+}
+
+>>>>>>> 3fc663dfbf381b2e0d4ae935e37fc2ad66c16d20
 * {
    padding: 0;
    margin: 0;
