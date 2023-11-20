@@ -64,7 +64,6 @@ function handleInput() {
   
 
       const temperature = document.querySelector('.deg');
-      const timeLonLat = document.querySelector('.info p')
       const cityElement = document.querySelector('.location');
       const weatherIconElement = document.querySelector('.icon');
 
@@ -175,12 +174,12 @@ function handleInput() {
       const formattedTime = formatter.format(adjustedTime);
 
       
-      cityElement.innerHTML = `<h2>${city.name}</h2>`;
+      cityElement.innerHTML = `<h2>${city.name}</h2> 
+      <p>${formattedTime} | H:${city.coord.lat.toFixed(2)}&deg; L:${city.coord.lon.toFixed(2)}&deg;
+      <br>Sunrise: ${riseHr}hr:${riseMin}min AM
+      <br>Sunset: ${setHr}hr:${setMin}min PM </p>`;
       weatherIconElement.innerHTML = iconMapping[weatherNow];
       temperature.innerHTML = `${kalToCel(temp)}<span class="cel">&deg;c</span>`;
-      timeLonLat.innerHTML = `<p>${formattedTime} | H:${city.coord.lat.toFixed(2)}&deg; L:${city.coord.lon.toFixed(2)}&deg;
-      <br>Sunrise: ${riseHr}hr:${riseMin}min AM
-      <br>Sunset: ${setHr}hr:${setMin}min PM`;
 
 
 
