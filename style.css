@@ -131,12 +131,11 @@ video {
 
 .degree h1 {
    text-align: left;
-   font-family: PoppinsBold;
+   font-weight: 700;
    font-size: 90px;
 }
 
 .degAndIcon .cel {
-   font-family: Poppins;
    font-weight: 100;
    position: absolute;
    font-size: 40px;
@@ -219,7 +218,6 @@ hr {
 
 .dayforcast .cel {
    display: inline;
-   font-family: Poppins;
    font-weight: 100;
    position: absolute;
    font-size: 10px;
@@ -296,7 +294,6 @@ hr {
 }
 .fivedayforcastInfo .cel{
    display: inline;
-   font-family: Poppins;
    font-weight: 100;
    position: absolute;
    font-size: 10px;
