@@ -364,8 +364,6 @@ hr {
       margin: 0;
    }
    .degAndLoc{
-      justify-content: center;
-      align-items: center;
       padding: 5px;
       margin-top: 4rem;
    }
@@ -379,6 +377,13 @@ hr {
    }
    .degree h1{
      font-size: 40px;
+   }
+   .degAndIcon{
+      justify-content: space-between;
+      width: 40%;
+   }
+   .location{
+      width: 60%;
    }
    .degAndIcon .icon img {
       margin-left: 1rem;
@@ -408,6 +413,7 @@ hr {
       height: 90px;
    }
    .dayforcast{
+      height: auto;
       margin-bottom: 2rem;
       width: 100%;
    }
@@ -431,7 +437,6 @@ hr {
       width: 100%;
       flex-direction: column;
    }
-   
    .info{
    height: auto;
    width: 100%;
