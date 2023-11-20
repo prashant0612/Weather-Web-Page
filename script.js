@@ -131,7 +131,6 @@ function handleInput() {
       var day3Min =datalist[23].main.temp_min;
       var day4Min =datalist[31].main.temp_min;
 
-
       // FOR SUNRISE 
       const sunRise = city.sunrise;
       // Convert UNIX timestamp to milliseconds
@@ -184,7 +183,7 @@ function handleInput() {
 
 
       main1.innerHTML = `
-      <p style="font-size: 15px;">Now</p>
+      <p style="font-size: 10px;">Now</p>
       ${iconMapping[weatherNow]}
       <p class="main1deg" style="font-size: 15px;">${kalToCel(temp)}<span class="cel">&deg;c</span></p>`;
       main2.innerHTML = `<p style="font-size: 15px;">${extractTime(forcast2hr)}</p>

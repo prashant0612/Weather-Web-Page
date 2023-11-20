@@ -43,7 +43,7 @@ video {
 
 .left {
    width: 70%;
-   height: 100%;
+   height: 50%;
    font-weight: 700;
    display: flex;
    flex-direction: column;
@@ -62,8 +62,9 @@ video {
    align-items: center;
 }
 #myInput{
+  
    border: none;
-   padding: 15px 80px;
+   padding: 15px 70px;
    color: white;
    border-radius: 20px 0px 0px 20px;
    background-color: rgba(41, 41, 41, 0.705);
@@ -85,15 +86,19 @@ video {
 
 .left h4 {
    font-size: small;
-   text-align: left;
 }
-
+.dayforcast .forecast{
+   font-weight: bold;
+   color: white;
+}
 .info {
    overflow: hidden;
    position: relative;
    width: 100%;
-   height: auto;
+   height: 14rem;
+   font-size: 5px;
    padding: 25px;
+   margin-bottom: 2rem;
    /* margin-right: 25px; */
    /* margin-top: 22px; */
    border-radius: 20px;
@@ -101,14 +106,39 @@ video {
 
    background-color: rgba(34, 34, 34, 0.541);
    backdrop-filter: blur(3px)
+}
+.weather-master{
+   height: 3rem;
+   justify-content: space-between;
+   align-items: center;
+   display: flex;
+}
+.boxes{
+   /* width: calc(50% - 20px);
+   height: calc(33.33% - 20px); */
+   width: 90px;
+   height: 60px;
+   border-radius: 7px;
+   background-color: rgba(0, 0, 0, 0.413);
+   backdrop-filter: blur(3px);
+   margin: 5px;
+   padding: 5px;
+ 
+}
+.weather-details{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
    
 }
 
 .degAndLoc{
+   margin-top: 1.3rem;
    width: 100%;
    height: fit-content;
    /* background-color: red; */
    display: flex;
+   flex-wrap: wrap;
 }
 .degAndIcon {
    width: 50%;
@@ -125,8 +155,8 @@ video {
 }
 
 .degAndIcon .icon img {
- width: 150px;
- height: 150px;
+ width: 100px;
+ height: 100px;
 }
 
 .degree h1 {
@@ -151,10 +181,10 @@ video {
    justify-content: space-between;
 }
 
-.info .location h2 {
+ .location h2 {
    width: fit-content;
    text-align: right;
-   font-size: 30px;
+   font-size: 20px;
    letter-spacing: 1px;
    padding-bottom: 5px;
 }
@@ -162,7 +192,7 @@ video {
 .info p {
    width: fit-content;
    text-align: right;
-   font-size: 20px;
+   font-size: 15px;
    font-weight: 100;
    letter-spacing: 1.5px;
 }
@@ -179,25 +209,33 @@ video {
    width: 100%;
    height: 100%;
    display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
 }
-.right .dayforcast {
-   position: relative;
-   width:100%;
-   height: 200px;
-   /* margin-top: 25px; */
-   padding: 25px;
+.weather-description{
+   justify-content: space-between;
+   width: 100%;
+   display: flex;
+}
+.weather-details{
+   width: 48%;
+   padding: 1rem;
    border-radius: 20px;
    background-color: rgba(34, 34, 34, 0.541);
    box-shadow: 0 0 20px white;
-
    backdrop-filter: blur(3px);
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
    overflow: hidden;
 }
+.dayforcast{
+   padding: 20px;
+}
+.dayforcast {
+   width:48%;
+   padding: 1rem;
+   border-radius: 20px;
+   background-color: rgba(34, 34, 34, 0.541);
+   box-shadow: 0 0 20px white;
+   backdrop-filter: blur(3px);
+}
+
 
 .dayforcast h4 {
    font-weight: 100;
@@ -239,27 +277,30 @@ hr {
    justify-content: space-evenly;
 }
 
-.right .fivedayforcast {
+ .fivedayforcast {
    position: relative;
+   height: 85%;
    width:100%;
-   margin-top: 23px;
    padding: 25px;
    border-radius: 20px;
    background-color: rgba(34, 34, 34, 0.541);
    box-shadow: 0 0 20px white;
-
    backdrop-filter: blur(3px);
    overflow: hidden;
 }
 
 .fivedayforcastInfo ul li {
+   margin-top: 0.5rem;
    position: relative;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 5px;
    font-size: 16px;
    font-weight: bold;
+}
+.fivedayforcastInfo ul li .icon{
+   width: 64px;
+   height: 64px;
 }
 
 .fivedayforcastInfo .upperbar {
