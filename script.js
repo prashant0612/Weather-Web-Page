@@ -1,7 +1,14 @@
+var inputElement= document.getElementById('myInput');
+var inputouterbox = document.getElementById('inp-btn');
+inputElement.addEventListener('focus', function(){
+  inputouterbox.style.boxShadow = '0 0 20px white';
+})
+inputElement.addEventListener('blur', function(){
+  inputouterbox.style.boxShadow = '0 0 10px white';
+})
 function handleInput() {
-  var inputElement = document.getElementById('myInput');
   var inputValue = inputElement.value;
-
+  inputouterbox.style.boxShadow = '0 0 20px white';
 
   const apiKey = '4e13120cf71ced98bb0b83db4a8624fe';
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${inputValue}&appid=${apiKey}`;

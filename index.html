@@ -13,15 +13,15 @@
         <source src="./video/mixkit-green-leaf-of-a-tree-wet-from-the-rain-18311-medium.mp4">
     </video>
 
-    <div class="container">
+    <div class="container" id="container">
 
-        <div class="left">
+        <div class="left" id="left">
             <div class="weather-input">
-                <div class="info">
+                <div class="info" id="info">
                     <div class="weather-master">
                         <h4>Weather App</h4>
-                        <div class="inp-btn">
-                            <input type="text" id="myInput" placeholder="Search Your Location">
+                        <div id="inp-btn">
+                            <input type="text" id="myInput" placeholder="Search Your Location" contenteditable="true" tabindex="0" onclick="shadow()">
                             <button onclick="handleInput()" class="submit-btn" type="submit">Search</button>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="weather-description">
-                    <div class="weather-details">
+                    <div class="weather-details" id="weather-details">
                         
                         <div class="boxes">
                             <p>hello world</p>
@@ -60,7 +60,7 @@
                             <p>hello world</p>
                         </div>
                     </div>
-                    <div class="dayforcast">
+                    <div class="dayforcast" id="dayforcast">
                         <h4 class="forecast">Hourly Forcast</h4>
                         <hr>
                         <div class="dayforcastIcon">
@@ -103,10 +103,10 @@
 
 
 
-        <div class="right">
+        <div class="right" id="right">
             <div class="dayAndFiveDay">
 
-                <div class="fivedayforcast">
+                <div class="fivedayforcast" id="fivedayforcast">
 
                     <h4 class="box1-p">5-Day Forecast</h4>
                     <hr>
@@ -172,6 +172,8 @@
                 </div>
             </div>
         </div>
+        <div class="circle" id="circle"></div>
+
     </div>
 
 

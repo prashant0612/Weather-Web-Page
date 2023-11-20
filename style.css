@@ -51,15 +51,16 @@ video {
    margin: 0 22px 0 0;
 }
 
-.inp-btn{
+#inp-btn{
    width: fit-content;
    height: fit-content;
    display: flex;
-   box-shadow: 0 0 20px white;
+   box-shadow: 0 0 10px white;
    border-radius: 20px 20px 20px 20px;
    margin: 30px 0;
    justify-content: flex-start;
    align-items: center;
+   transition: ease .5s;
 }
 #myInput{
   
@@ -80,9 +81,15 @@ video {
    border: none;
    border-radius: 0px 20px 20px 0;
    background-color: rgba(90, 90, 90, 0.705);
+   transition: linear .02s;
    backdrop-filter: blur(3px)
+}
+.submit-btn:hover{
+   transform: scale(1.01);
+   background-color: rgba(131, 131, 131, 0.705);
 
 }
+
 
 .left h4 {
    font-size: small;
@@ -344,6 +351,17 @@ hr {
 }
 .fivedayforcastInfo h4{
    width: 30px;
+}
+.circle {
+   width: 200px;
+   height: 200px;
+   background:radial-gradient(rgba(255, 255, 255, 0.568),transparent,transparent);
+   border-radius: 50%;
+   position: absolute;
+   pointer-events: none;
+   transition: linear .2s;
+   opacity: 1;
+   z-index: -1;
 }
 
 @media screen and (max-width: 1057px) {
