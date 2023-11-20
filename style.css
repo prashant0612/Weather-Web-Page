@@ -352,17 +352,6 @@ hr {
 .fivedayforcastInfo h4{
    width: 30px;
 }
-.circle {
-   width: 200px;
-   height: 200px;
-   background:radial-gradient(rgba(255, 255, 255, 0.568),transparent,transparent);
-   border-radius: 50%;
-   position: absolute;
-   pointer-events: none;
-   transition: linear .2s;
-   opacity: 1;
-   z-index: -1;
-}
 
 @media screen and (max-width: 1057px) {
    .right .dayforcast {
