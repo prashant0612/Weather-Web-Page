@@ -25,19 +25,17 @@ video {
 
 .container {
    width: 100%;
+<<<<<<< HEAD
    height: fit-content;
+=======
+>>>>>>> 8d64718e776e95139de411fa068ea6e037720de7
    padding: 5%;
-   /* background-image: url("https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-   background-size: cover;
-   background-position: top; */
-   background-color: rgba(0, 0, 0, 0.507);
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
    text-align: center;
    color: white;
-   z-index: 1;
    display: flex;
    color: white;
 }
@@ -103,7 +101,7 @@ video {
    overflow: hidden;
    position: relative;
    width: 100%;
-   height: 14rem;
+   height: 17rem;
    font-size: 5px;
    padding: 25px;
    margin-bottom: 2rem;
@@ -129,7 +127,7 @@ video {
    border-radius: 7px;
    background-color: rgba(0, 0, 0, 0.413);
    backdrop-filter: blur(3px);
-   margin: 5px;
+   margin: 9px;
    padding: 5px;
  
 }
@@ -163,12 +161,13 @@ video {
 }
 
 .degAndIcon .icon img {
+margin-left: 2.5rem;
  width: 100px;
  height: 100px;
 }
 
 .degree h1 {
-   text-align: left;
+   width: fit-content;
    font-weight: 700;
    font-size: 90px;
 }
@@ -207,7 +206,6 @@ video {
 
 .right {
    width: 30%;
-   height: 100%;
    /* background-color: rgba(0, 128, 0, 0.589); */
    display: flex;
    align-items: flex-start;
@@ -287,8 +285,8 @@ hr {
 
  .fivedayforcast {
    position: relative;
-   height: 85%;
    width:100%;
+   height: 100%;
    padding: 25px;
    border-radius: 20px;
    background-color: rgba(34, 34, 34, 0.541);
@@ -354,7 +352,104 @@ hr {
    width: 30px;
 }
 
-@media screen and (max-width: 1057px) {
+
+@media screen and (max-width:768px) {
+   .container {
+        
+      top: auto;
+      left: auto;
+      transform: none;
+      flex-wrap: wrap;
+   } 
+   #myInput{
+      padding: 15px;
+   }
+   #inp-btn{
+      display: flex;
+      margin: 0;
+   }
+   .degAndLoc{
+      padding: 5px;
+      margin-top: 4rem;
+   }
+   .weather-master , .heading{
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+   }
+   .degree h1{
+     font-size: 40px;
+   }
+   .degAndIcon{
+      justify-content: space-between;
+      width: 40%;
+   }
+   .location{
+      width: 60%;
+   }
+   .degAndIcon .icon img {
+      margin-left: 1rem;
+      width: 70px;
+      height: 70px;
+   }
+   .degAndIcon .cel {
+      font-weight: 100;
+      position: absolute;
+      font-size: 20px;
+      display: inline;
+  }
+   .info p{
+      font-size: 10px;
+   }
+   .weather-description{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .weather-details{
+      margin-bottom: 2rem;
+      width: 100%;
+      flex-wrap: wrap;
+   }
+   .boxes{
+      height: 90px;
+   }
+   .dayforcast{
+      height: auto;
+      margin-bottom: 2rem;
+      width: 100%;
+   }
+
+   .right{
+      flex-wrap: wrap;
+      display:flex;
+      width: 100%;
+   }
+   .left{
+      width: 100%;
+      margin: 0;
+   }
+   .weather-input{
+      width: 100%;
+   }
+   .dayforcastIcon{
+      width: 100%;
+   }
+   .main1 , .main2{
+      width: 100%;
+      flex-direction: column;
+   }
+   .info{
+   height: auto;
+   width: 100%;
+   }
+}
+
+
+/* @media screen and (max-width: 1057px) {
    .right .dayforcast {
       width: 100%;
    }
@@ -366,8 +461,8 @@ hr {
 
    }
 
- }
- @media screen and (max-width: 700px) {
+ } */
+ /* @media screen and (max-width: 700px) {
 
    .container{
       flex-direction: column;
@@ -442,4 +537,4 @@ hr {
    font-weight: 100;
    padding-bottom: 10px;
 }
- }
+ } */

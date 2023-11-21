@@ -181,7 +181,8 @@ function handleInput() {
 
       
       cityElement.innerHTML = `<h2>${city.name}</h2> 
-      <p>${formattedTime} | H:${city.coord.lat.toFixed(2)}&deg; L:${city.coord.lon.toFixed(2)}&deg;
+      <p>${formattedTime} 
+      <br>H:${city.coord.lat.toFixed(2)}&deg; L:${city.coord.lon.toFixed(2)}&deg;
       <br>Sunrise: ${riseHr}hr:${riseMin}min AM
       <br>Sunset: ${setHr}hr:${setMin}min PM </p>`;
       weatherIconElement.innerHTML = iconMapping[weatherNow];
@@ -190,7 +191,7 @@ function handleInput() {
 
 
       main1.innerHTML = `
-      <p style="font-size: 10px;">Now</p>
+      <p style="font-size: 15px;">Now</p>
       ${iconMapping[weatherNow]}
       <p class="main1deg" style="font-size: 15px;">${kalToCel(temp)}<span class="cel">&deg;c</span></p>`;
       main2.innerHTML = `<p style="font-size: 15px;">${extractTime(forcast2hr)}</p>
