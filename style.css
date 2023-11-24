@@ -125,7 +125,15 @@ video {
    backdrop-filter: blur(3px);
    margin: 9px;
    padding: 5px;
- 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.boxes p{
+   color:aqua;
+   padding-bottom: 5px;
+   font-size: 11px;
 }
 .weather-details{
    display: none;

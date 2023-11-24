@@ -77,7 +77,22 @@ function handleInput() {
         let dayIndex = date.getDay();
         return weekdays[dayIndex];
       }
-  
+      
+      function convertHumidityToPercentage(apiValue) {
+        const maxValue = 100; // Maximum value for humidity is usually 100
+        const percentage = (apiValue / maxValue) * 100;
+        return percentage;
+      }
+
+      function convertVisiblityToMiles(meters) {
+        const metersInOneMile = 1609.34; // 1 mile is approximately 1609.34 meters
+        return Math.floor(meters / metersInOneMile);
+      }
+
+      function convertWindSpeedToMph(speedMps) {
+        const mph = speedMps * 2.23694;
+        return Math.floor(mph);
+      }
 
       const temperature = document.querySelector('.deg');
       const cityElement = document.querySelector('.location');
@@ -96,11 +111,18 @@ function handleInput() {
       const day3 = document.querySelector('.day3');
       const day4 = document.querySelector('.day4');
 
+      //START WEATHER DETAILS
+      const feels_like = document.querySelector('.feels-like');
+      const humidity = document.querySelector('.humidity');
+      const pressure = document.querySelector('.pressure');
+      const visiblity = document.querySelector('.visiblity');
+      const wind_speed = document.querySelector('.wind-speed');
+      const population = document.querySelector('.population');
+      // END WEATHER DETAILS
+      
+      
 
-      
-      
-      
-      
+
       const temp = datalist[0].main.temp; //fatching current temp of the city
       const weatherNow = datalist[0].weather[0].icon;
       
@@ -146,6 +168,28 @@ function handleInput() {
       var day2Min =datalist[15].main.temp_min;
       var day3Min =datalist[23].main.temp_min;
       var day4Min =datalist[31].main.temp_min;
+     
+      var boxFeelsLike = datalist[0].main.feels_like;
+      var boxHumidity = datalist[0].main.humidity;
+      var boxPressure = datalist[0].main.pressure;
+      var boxVisiblity = datalist[0].visibility;
+      var boxWindSpeed = datalist[0].wind.speed;
+      var boxPopulation = city.population;
+
+
+      //START WEATHER DETAILS BOX
+      feels_like.innerHTML= `${kalToCel(boxFeelsLike)}<span class="cel">&deg;c</span>`;
+      var humidityPercentage = convertHumidityToPercentage(boxHumidity);
+      humidity.innerHTML = `${humidityPercentage}%`;
+      pressure.innerHTML = `${boxPressure} psi`;
+      var boxVisiblityToMiles = convertVisiblityToMiles(boxVisiblity);
+      visiblity.innerHTML = `${boxVisiblityToMiles} mi`;
+      var boxWindSpeedInMph = convertWindSpeedToMph(boxWindSpeed);
+      wind_speed.innerHTML = `${boxWindSpeedInMph} mi/h`;
+      var formattedPopulation = boxPopulation.toLocaleString();
+      population.innerHTML = formattedPopulation;
+      //END WEATHER DETAILS BOX
+      
 
       // FOR SUNRISE 
       const sunRise = city.sunrise;
