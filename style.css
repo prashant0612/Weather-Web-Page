@@ -3,6 +3,7 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   scroll-behavior: smooth;
 }
 
 body,
@@ -19,16 +20,11 @@ video {
    height: 100%;
    object-fit: cover;
    z-index: -1;
-   background-color: black;
  }
 
 
 .container {
    width: 100%;
-<<<<<<< HEAD
-   height: fit-content;
-=======
->>>>>>> 8d64718e776e95139de411fa068ea6e037720de7
    padding: 5%;
    position: absolute;
    top: 50%;
@@ -132,7 +128,7 @@ video {
  
 }
 .weather-details{
-   display: flex;
+   display: none;
    flex-wrap: wrap;
    justify-content: space-evenly;
    
@@ -230,16 +226,16 @@ margin-left: 2.5rem;
    backdrop-filter: blur(3px);
    overflow: hidden;
 }
-.dayforcast{
-   padding: 20px;
-}
+
 .dayforcast {
+   display: none;
    width:48%;
    padding: 1rem;
    border-radius: 20px;
    background-color: rgba(34, 34, 34, 0.541);
    box-shadow: 0 0 20px white;
    backdrop-filter: blur(3px);
+   overflow: hidden;
 }
 
 
@@ -293,6 +289,9 @@ hr {
    box-shadow: 0 0 20px white;
    backdrop-filter: blur(3px);
    overflow: hidden;
+   display: none;
+   justify-content: space-evenly;
+   flex-direction: column;
 }
 
 .fivedayforcastInfo ul li {
@@ -353,7 +352,7 @@ hr {
 }
 
 
-@media screen and (max-width:768px) {
+@media (max-width:1200px) {
    .container {
         
       top: auto;

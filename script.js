@@ -1,5 +1,10 @@
 var inputElement= document.getElementById('myInput');
 var inputouterbox = document.getElementById('inp-btn');
+var weatherDetails = document.getElementById('weather-details');
+var dayforcast = document.getElementById('dayforcast');
+var fivedayforcase = document.getElementById('fivedayforcast');
+
+
 inputElement.addEventListener('focus', function(){
   inputouterbox.style.boxShadow = '0 0 20px white';
 })
@@ -9,6 +14,10 @@ inputElement.addEventListener('blur', function(){
 function handleInput() {
   var inputValue = inputElement.value;
   inputouterbox.style.boxShadow = '0 0 20px white';
+  weatherDetails.style.display = "flex";
+  dayforcast.style.display = "block";
+  fivedayforcase.style.display = "flex";
+
 
   const apiKey = '4e13120cf71ced98bb0b83db4a8624fe';
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${inputValue}&appid=${apiKey}`;
